@@ -21,6 +21,10 @@ async function handleGetEventRegister(req, res) {
         .status(404)
         .json({ success: false, message: "Event not found" });
 
+    if (event.eventSize === event.eventArray.length) {
+      return res.status(403).send("Event is full.")
+    }
+
     const alreadyJoined = event.eventArray.some(
       (team) => team.owner && team.owner.toString() === _id.toString()
     );

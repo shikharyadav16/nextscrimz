@@ -40,8 +40,13 @@ app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, "public", "landing.html"));
 });
 
-app.get('/sitemap.xml', (req, res) => {
-  res.sendFile(path.join(__dirname, 'sitemap.xml'));
+app.get("/sitemap.xml", (req, res) => {
+  res.header("Content-Type", "application/xml");
+  res.sendFile(__dirname + "/sitemap.xml", {
+    headers: {
+      "Last-Modified": new Date().toUTCString() // today’s date
+    }
+  });
 });
 
 app.use(limiter);
