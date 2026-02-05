@@ -1,0 +1,10 @@
+PG_BASE=https://api.cashfree.com/pg
+PG_CLIENT_ID=102995844237339bdf4d6bc2b818599201
+PG_CLIENT_SECRET=cfsk_ma_prod_53af2751840081850a8ba601b986cef5_3fc584cd
+
+JSON_KEY=A7f9L2qX8rW3
+
+MAILER_USER=nextscrimz@gmail.com
+MAILER_PASS=iqiq jgkj yjce sxhe
+
+MONGO_URI=mongodb+srv://yadavshikhar49:iamshikhar@cluster0.qcw2ol0.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
